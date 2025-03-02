@@ -66,12 +66,15 @@ class SDKCoordinator: Coordinator {
         case .liveness:
             popTo(injector.instructionsViewController)
             self.currentStep = .instructions
+            self.nextStep = .liveness
         case .send:
             popTo(injector.livenessViewController)
             self.currentStep = .liveness
+            self.nextStep = .send
         case .feedback:
             popTo(injector.sendViewController)
             self.currentStep = .send
+            self.nextStep = .feedback
         case .close:
             stopNavigation()
         }

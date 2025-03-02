@@ -12,7 +12,7 @@ class CoordinatedUIViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.tintColor = .red
+        self.navigationController?.navigationBar.tintColor = .tintColor
     }
     
     private func setupCustomBackButton() {
